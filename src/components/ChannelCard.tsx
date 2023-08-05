@@ -1,15 +1,16 @@
 import React from 'react'
 import { vidProps } from '../types'
-import {Box, Typography, Card, CardContent, CardMedia} from '@mui/material'
+import {Box, Typography, CardContent, CardMedia} from '@mui/material'
 import {colors} from '../utils/constants'
 import { Link } from 'react-router-dom'
 import { CheckCircle } from '@mui/icons-material'
 import { demoChannelTitle, demoChannelUrl, demoProfilePicture } from '../utils/constants'
 interface ChannelCardProps {
   channelDetail: vidProps;
+  marginTop?: string;
 }
 
-const ChannelCard: React.FC<ChannelCardProps> = ({channelDetail}) => {
+const ChannelCard: React.FC<ChannelCardProps> = ({channelDetail, marginTop}) => {
   const {snippet, id : {channelId}} = channelDetail;
   const {title, thumbnails: {medium: {url}}} = snippet;
 
@@ -17,7 +18,9 @@ const ChannelCard: React.FC<ChannelCardProps> = ({channelDetail}) => {
     <Box sx={{
       width: {xs: "356px", md:"320px"}, height: 326,
       borderRadius: 20, boxShadow: 'none',
-      display: 'flex', justifyContent: 'center', textAlign: 'center', alignItems:"center",
+      display: 'flex', justifyContent: 'center',
+      textAlign: 'center', alignItems:"center",
+      marginTop, mx: 'auto',
       }}>
       <Link to={url? `/channel/${channelId}`: demoChannelUrl} style={{textDecoration: 'none', color: '#fff'}}>
         <CardContent sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', alignItems:"center", color: '#fff' }}>
