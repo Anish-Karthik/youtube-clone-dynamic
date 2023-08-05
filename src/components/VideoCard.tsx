@@ -17,7 +17,7 @@ const VideoCard: React.FC<VideoCardProps>  = ({video}) => {
   return (
     <Card 
       sx={{
-        width: {xs:"100%", md:"320px"},
+        width: {xs:"100%", sm:"358px", md:"320px"},
         borderRadius: 0, boxShadow: 'none', 
       }}
     >
@@ -27,7 +27,7 @@ const VideoCard: React.FC<VideoCardProps>  = ({video}) => {
           component="img"
           image={url}
           alt={title}
-          sx={{height: 180, width: 358}}
+          sx={{height: 180, width: {xs:"100%", md:"320px"}, objectFit: 'cover'}}
         />
       </Link>
       <CardContent
