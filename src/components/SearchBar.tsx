@@ -5,10 +5,20 @@ import {Search} from '@mui/icons-material'
 const searchBarBGColor = '#000';
 const searchBarColor = '#fff';
 const SearchBar = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if(!searchTerm) return;
+    navigate(`/search/${searchTerm}`);
+    setSearchTerm('');  
+  }
+
   return (
     <Paper
       component="form"
-      onSubmit={() => {}}
+      onSubmit={(e) => {handleSubmit(e)}}
       sx={{ 
         backgroundColor: searchBarBGColor,
         color: searchBarColor,
@@ -23,10 +33,10 @@ const SearchBar = () => {
         style={{backgroundColor: searchBarBGColor, color: searchBarColor}}
         className='search-bar'
         placeholder="Search..."
-        onChange={() => {}}
-        value=""
+        onChange={(e) => {setSearchTerm(e.target.value)}}
+        value={searchTerm}
       />
-      <IconButton type="submit" sx={{ p: '10px', color:'red' }} aria-label="search" >
+      <IconButton type="submit" sx={{ p: '10px', color:'red' }} aria-label="search">
         <Search />
       </IconButton>
     </Paper>
