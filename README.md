@@ -1,27 +1,15 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Home Page 
+![image](https://github.com/Anish-Karthik/youtube-clone-dynamic/assets/111771214/8b8166cc-f8df-46bb-98cd-e06adc09afbb)
 
-Currently, two official plugins are available:
+## Sidebar menu
+![image](https://github.com/Anish-Karthik/youtube-clone-dynamic/assets/111771214/cba44819-8d8d-4299-97b1-344b70e18fa4)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Search 
+![image](https://github.com/Anish-Karthik/youtube-clone-dynamic/assets/111771214/1d52aa88-af0b-4253-8984-822895b33177)
 
-## Expanding the ESLint configuration
+## Channel Page
+![image](https://github.com/Anish-Karthik/youtube-clone-dynamic/assets/111771214/a5eaa003-931e-44d1-9f80-25c612a8cb85)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Youtube video playing
+![image](https://github.com/Anish-Karthik/youtube-clone-dynamic/assets/111771214/aac29e36-c03b-452c-bee3-c0e0b59cdc1f)
